@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hướng dẫn sử dụng</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="icon" href="../icon.png" sizes="32x32" />
+	<link rel="icon" href="../icon.png" sizes="192x192" />
+	<link rel="apple-touch-icon-precomposed" href="../icon.png" />
+	<script src="https://kit.fontawesome.com/916cb3129b.js"></script>
+	<link rel="stylesheet" type="text/css" href="../bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="../jquery-3.4.1.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+			<div style="height: 100px;"></div>
+			<h1>
+				Dành cho nhân viên pha chế
+			</h1>
+		</div>
+	</div><!-- end row -->
+	<div class="row">
+		<div class="col-xl-9 col-lg-9 col-md-9 col-sm-9 col-12">
+			<h3 id="giaodien">
+				Giao diện
+			</h3>
+			<p>
+				Giao diện của nhân viên pha chế gồm có 2 phần chính: danh sách chờ pha chế và trạng thái.
+				<br>
+				Danh sách chờ pha chế chưa các món chưa và đang được pha chế, còn trạng thái hiển thị trạng thái hoạt động của quán.
+			</p>
+			<p>
+				<a href="upload/hinh45.JPG">
+					<img src="upload/hinh45.JPG">
+				</a>
+			</p>
+			<p>
+				<a href="upload/hinh46.JPG">
+					<img src="upload/hinh46.JPG">
+				</a>
+			</p>
+			<p>
+				Thường xuyên nhấn vào nút làm mới để cập nhật danh sách. Nên làm mới danh sách trước khi nhận pha chế để tránh tình trạng bị xung đột với nhân viên khác.
+			</p>
+			<h3 id="nhanphache">
+				Nhận pha chế
+			</h3>
+			<p>
+				Danh sách các món đang chờ pha chế sẽ được sắp xếp theo thời gian gọi, món nào được gọi trước sẽ nằm trước. Chỉ cần nhấp vào nút Pha chế trên danh sách để nhận pha chế đồ uống. Lúc này đồ uống sẽ được chuyển sang trạng thái đang pha chế.
+			</p>
+			<p>
+				<a href="upload/hinh47.JPG">
+					<img src="upload/hinh47.JPG">
+				</a>
+			</p>
+			<h3 id="huyphache">
+				Hủy pha chế
+			</h3>
+			<p>
+				Đôi khi bạn nhận pha chế nhầm món, hoặc muốn chuyển sang cho người khác pha chế, hoặc khách hàng yêu cầu hủy đồ uống và tình trạng thực tế của đồ uống có thể hủy. Lúc này bạn có thể nhấp vào nút Hủy của đồ uống để hủy pha chế. Lúc này trạng thái của đồ uống sẽ trở về trạng thái chưa pha chế.
+			</p>
+			<h3 id="hoanthanhphache">
+				Hoàn thành pha chế
+			</h3>
+			<p>
+				Khi pha chế xong, bạn chỉ cần nhấp vào Xong. Đồ uống sẽ được chuyển sang trạng thái đã pha chế xong để nhân viên phục vụ có thể đem cho khách. Đồ uống đó cũng sẽ biến mất khỏi danh sách đang chờ pha chế.
+			</p>
+		</div><!-- end col -->
+		<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12">
+			<div class="list" id="list">
+				<a href="#giaodien">Giao diện</a>
+			</div>
+			<div class="list">
+				<a href="#nhanphache">Nhận pha chế</a>
+			</div>
+			<div class="list">
+				<a href="#huyphache">Hủy pha chế</a>
+			</div>
+			<div class="list">
+				<a href="#hoanthanhphache">Hoàn thành pha chế</a>
+			</div>
+			<div class="list">
+				<div class="box">
+					<a href="phuc-vu.html">Nhân viên phục vụ</a>
+				</div>
+				<div class="box">
+					<a href="pha-che.html">Nhân viên pha chế</a>
+				</div>
+				<div class="box">
+					<a href="thu-ngan.html">Thu ngân</a>
+				</div>
+				<div class="box">
+					<a href="quan-ly.html">Quản lý</a>
+				</div>
+			</div>
+		</div><!-- end col -->
+	</div><!-- end row -->
+	<div class="row">
+		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+			<div class="text-center">
+				<div id="backtolist" class="backtolist">
+					<a href="#list">
+						<i class="fas fa-list"></i>
+					</a>					
+				</div>
+				<div class="backtotop" id="backtotop">
+					<i class="fas fa-chevron-up"></i>
+				</div>
+				<script type="text/javascript">
+					$(document).ready(function(){
+						var scroll = new SmoothScroll('a[href*="#"]', {
+							speed: 500,
+							speedAsDuration: true
+						});
+						$('#backtotop').click(function(){ 
+					        $("html, body").animate({ scrollTop: 0 }, 500); 
+					        return false; 
+					    });
+					});
+				</script>
+				Hỗ trợ: x@caffee.xyz
+			</div>
+		</div>
+	</div><!-- end row -->
+</div><!-- end container -->
+</body>
+</html>
